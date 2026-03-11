@@ -1,4 +1,4 @@
-export default function Projects() {
+export default function Works() {
   return (
     <div>page</div>
   )
