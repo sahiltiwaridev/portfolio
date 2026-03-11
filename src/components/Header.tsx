@@ -6,11 +6,11 @@ export type headerProps = {
 
 export default function Header({ headername }: headerProps) {
   return (
-    <div className="flex flex-row gap-6 items-center">
+    <header className="flex flex-row gap-6 items-center">
       <Link href="/">
         <ChevronLeft size={44} />
       </Link>
-      <span className="text-2xl font-bold">{headername}</span>
-    </div>
+      <h1 className="text-2xl font-bold">{headername}</h1>
+    </header>
   );
 }

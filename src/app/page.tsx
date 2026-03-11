@@ -3,6 +3,12 @@ import Link from "next/link";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { MdWavingHand } from "react-icons/md";
 
+export const metadata = {
+  title: "Sahil Tiwari — JavaScript Developer",
+  description:
+    "Hey, I'm Sahil. I speak JavaScript, build things that barely work, and document the process that nobody reads.",
+};
+
 const pageLinkStyles = "flex items-center gap-2 text-xl";
 const socialLinkStyles =
   "flex items-center gap-2 text-xl text-gray-400 hover:text-white duration-200";
@@ -11,17 +17,16 @@ const arrowStyles = "transition-transform duration-200 group-hover:-rotate-45";
 export default function Home() {
   return (
     <div className="flex flex-col h-full w-full px-20 py-44 gap-10">
-      <div>
-        <p className="text-6xl font-extrabold">
-          <span className="flex items-center gap-2">
-            Hey!
-            <MdWavingHand className="text-yellow-400" />
-          </span>{" "}
-          I'm <Link href="/about">Sahil.</Link> I speak JavaScript, build{" "}
-          <Link href="/works">things</Link> that barely work, and document the
-          process that nobody reads.
-        </p>
-      </div>
+      <p className="text-6xl font-extrabold">
+        <span className="flex items-center gap-2">
+          Hey!
+          <MdWavingHand className="text-yellow-400" />
+        </span>{" "}
+        I'm <Link href="/about">Sahil.</Link> I speak JavaScript, build{" "}
+        <Link href="/works">things</Link> that barely work, and document the
+        process that nobody reads.
+      </p>
+
       <div className="flex flex-row justify-between">
         <ul>
           <li>
