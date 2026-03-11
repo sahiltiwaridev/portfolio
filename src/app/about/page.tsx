@@ -1,16 +1,21 @@
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function About() {
   return (
-    <div className="w-1/2 flex flex-col mx-auto gap-6">
+    <div className="w-1/2 flex flex-col mx-auto gap-6 pt-12">
+      <Header headername="About Me" />
       <p>
-        I'm Sahil, from Habra, West Bengal — a place you've probably never heard
-        of. It's a small town, the internet is decent, and the tea is excellent.
-        The people are a little weird but manageable.
+        I'm Sahil Tiwari, from Habra, West Bengal — a place you've probably
+        never heard of. It's a small town, the internet is decent, and the tea
+        is excellent. The people are a little weird but manageable.
       </p>
       <div className="flex flex-row justify-center items-center py-5">
-        <Image src="/me.jpg" alt="Sahil" width={400} height={400} />
+        <Link href="https://instagram.com/sahiltiwari.official" target="_blank">
+          <Image src="/me.jpg" alt="Sahil" width={400} height={400} />
+        </Link>
         <Image src="/arrow.png" alt="arrow" width={200} height={50} />
       </div>
       <p>
@@ -76,6 +81,7 @@ export default function About() {
         </Link>
         . I'm very much available.
       </p>
+      <Footer />
     </div>
   );
 }

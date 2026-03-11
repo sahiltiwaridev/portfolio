@@ -3,7 +3,9 @@ import Link from "next/link";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { MdWavingHand } from "react-icons/md";
 
-const linkStyles = "flex items-center gap-2 text-xl";
+const pageLinkStyles = "flex items-center gap-2 text-xl";
+const socialLinkStyles =
+  "flex items-center gap-2 text-xl text-gray-400 hover:text-white duration-200";
 const arrowStyles = "transition-transform duration-200 group-hover:-rotate-45";
 
 export default function Home() {
@@ -24,7 +26,7 @@ export default function Home() {
         <ul>
           <li>
             <Link href="/about" className="group">
-              <div className={linkStyles}>
+              <div className={pageLinkStyles}>
                 <ArrowRight className={arrowStyles} />
                 <span>About Me</span>
               </div>
@@ -32,7 +34,7 @@ export default function Home() {
           </li>
           <li>
             <Link href="/works" className="group">
-              <div className={linkStyles}>
+              <div className={pageLinkStyles}>
                 <ArrowRight className={arrowStyles} />
                 <span>My Works</span>
               </div>
@@ -40,7 +42,7 @@ export default function Home() {
           </li>
           <li>
             <Link href="/contact" className="group">
-              <div className={linkStyles}>
+              <div className={pageLinkStyles}>
                 <ArrowRight className={arrowStyles} />
                 <span>Get in touch</span>
               </div>
@@ -50,7 +52,7 @@ export default function Home() {
         <ul>
           <li>
             <Link href="https://github.com/sahiltiwaridev" target="_blank">
-              <div className={linkStyles}>
+              <div className={socialLinkStyles}>
                 <FaGithub />
                 <span>Where the bugs live</span>
               </div>
@@ -61,7 +63,7 @@ export default function Home() {
               href="https://linkedin.com/in/sahil-tiwari-dev"
               target="_blank"
             >
-              <div className={linkStyles}>
+              <div className={socialLinkStyles}>
                 <FaLinkedin />
                 <span>For the recruiters</span>
               </div>
@@ -72,7 +74,7 @@ export default function Home() {
               href="https://instagram.com/sahiltiwari.official"
               target="_blank"
             >
-              <div className={linkStyles}>
+              <div className={socialLinkStyles}>
                 <FaInstagram />
                 <span>I also touch grass</span>
               </div>
