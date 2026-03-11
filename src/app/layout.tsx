@@ -36,6 +36,9 @@ export const metadata = {
     title: "Sahil Tiwari — JavaScript Developer",
     description: "JavaScript developer from Habra, West Bengal.",
   },
+  verification: {
+    google: "FBEGmsRGzOIk4TaYAc2XaeI0CmMU4vJ2fRpmfE2Vt1I",
+  },
 };
 
 export default function RootLayout({
