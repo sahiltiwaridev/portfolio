@@ -6,7 +6,7 @@ import { MdWavingHand } from "react-icons/md";
 export const metadata = {
   title: "Sahil Tiwari — JavaScript Developer",
   description:
-    "Hey, I'm Sahil. I speak JavaScript, build things that barely work, and document the process that nobody reads.",
+    "Hey, I'm Sahil. I speak JavaScript, build things that barely work, and document the results that nobody reads.",
 };
 
 const pageLinkStyles = "flex items-center gap-2 text-xl";
@@ -16,7 +16,7 @@ const arrowStyles = "transition-transform duration-200 group-hover:-rotate-45";
 
 export default function Home() {
   return (
-    <div className="flex flex-col h-full w-full px-20 py-44 gap-10">
+    <main className="flex flex-col h-full w-full px-20 py-44 gap-10">
       <p className="text-6xl font-extrabold">
         <span className="flex items-center gap-2">
           Hey!
@@ -24,7 +24,7 @@ export default function Home() {
         </span>{" "}
         I'm <Link href="/about">Sahil.</Link> I speak JavaScript, build{" "}
         <Link href="/works">things</Link> that barely work, and document the
-        process that nobody reads.
+        results that nobody reads.
       </p>
 
       <div className="flex flex-row justify-between">
@@ -87,6 +87,6 @@ export default function Home() {
           </li>
         </ul>
       </div>
-    </div>
+    </main>
   );
 }

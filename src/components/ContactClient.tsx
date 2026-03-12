@@ -1,7 +1,5 @@
 "use client";
 
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
@@ -9,21 +7,9 @@ import { FaXTwitter, FaPinterest } from "react-icons/fa6";
 import Link from "next/link";
 
 const socialLinks = [
-  {
-    href: "https://github.com/sahiltiwaridev",
-    icon: FaGithub,
-    label: "GitHub",
-  },
-  {
-    href: "https://linkedin.com/in/sahil-tiwari-dev",
-    icon: FaLinkedin,
-    label: "LinkedIn",
-  },
-  {
-    href: "https://instagram.com/sahiltiwari.official",
-    icon: FaInstagram,
-    label: "Instagram",
-  },
+  { href: "https://github.com/sahiltiwaridev", icon: FaGithub, label: "GitHub" },
+  { href: "https://linkedin.com/in/sahil-tiwari-dev", icon: FaLinkedin, label: "LinkedIn" },
+  { href: "https://instagram.com/sahiltiwari.official", icon: FaInstagram, label: "Instagram" },
   { href: "https://x.com/Sahil_Creates", icon: FaXTwitter, label: "X" },
   { href: "https://pin.it/3qZTuPaDz", icon: FaPinterest, label: "Pinterest" },
 ];
@@ -58,9 +44,7 @@ export default function ContactClient() {
   };
 
   return (
-    <div className="w-1/2 flex flex-col mx-auto gap-6 pt-12">
-      <Header headername="Get in Touch" />
-
+    <>
       <p className="text-xl">
         I'm on the job market, available, and caffeinated enough to respond
         quickly. Got work? Let's talk. Got an idea? Let's build. Got neither?
@@ -128,8 +112,6 @@ export default function ContactClient() {
           </div>
         </div>
       </form>
-
-      <Footer />
-    </div>
+    </>
   );
 }
