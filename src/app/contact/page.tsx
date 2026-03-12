@@ -1,3 +1,5 @@
+import ContactClient from "@/components/ContactClient";
+
 export const metadata = {
   title: "Get in Touch — Sahil Tiwari",
   description:
@@ -5,5 +7,5 @@ export const metadata = {
 };
 
 export default function Contact() {
-  return <div>page</div>;
+  return  <ContactClient />
 }
