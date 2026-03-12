@@ -58,7 +58,7 @@ export default function ContactClient() {
   };
 
   return (
-    <div className="w-1/2 flex flex-col mx-auto gap-8 pt-12">
+    <div className="w-1/2 flex flex-col mx-auto gap-6 pt-12">
       <Header headername="Get in Touch" />
 
       <p className="text-xl">
@@ -67,7 +67,7 @@ export default function ContactClient() {
         Say hi anyway.
       </p>
 
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-5">
         <input
           type="text"
           placeholder="Name"
@@ -95,7 +95,7 @@ export default function ContactClient() {
         <button
           type="submit"
           disabled={status === "sending"}
-          className="w-full text-sm border border-white/20 px-6 py-3 hover:bg-white hover:text-black transition-all duration-200 disabled:opacity-50"
+          className="w-full text-md rounded-sm border border-white/20 px-6 py-3 bg-gray-400 hover:bg-white text-black transition-all duration-200 disabled:opacity-50"
         >
           {status === "sending" ? "Sending..." : "Send"}
         </button>
