@@ -9,15 +9,15 @@ export const metadata = {
     "Hey, I'm Sahil. I speak JavaScript, build things that barely work, and document the results that nobody reads.",
 };
 
-const pageLinkStyles = "flex items-center gap-2 text-xl";
+const pageLinkStyles = "flex items-center gap-2 text-lg md:text-xl";
 const socialLinkStyles =
-  "flex items-center gap-2 text-xl text-gray-400 hover:text-white duration-200";
+  "flex items-center gap-2 text-lg md:text-xl text-gray-400 hover:text-white duration-200";
 const arrowStyles = "transition-transform duration-200 group-hover:-rotate-45";
 
 export default function Home() {
   return (
-    <main className="flex flex-col h-full w-full px-20 py-44 gap-10">
-      <p className="text-6xl font-extrabold">
+    <main className="flex flex-col h-full w-full px-6 md:px-20 py-20 md:py-44 gap-10">
+      <p className="text-4xl md:text-6xl font-extrabold">
         <span className="flex items-center gap-2">
           Hey!
           <MdWavingHand className="text-yellow-400" />
@@ -27,7 +27,7 @@ export default function Home() {
         results that nobody reads.
       </p>
 
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-col md:flex-row md:justify-between gap-8 md:gap-0">
         <ul>
           <li>
             <Link href="/about" className="group">
@@ -64,10 +64,7 @@ export default function Home() {
             </Link>
           </li>
           <li>
-            <Link
-              href="https://linkedin.com/in/sahil-tiwari-dev"
-              target="_blank"
-            >
+            <Link href="https://linkedin.com/in/sahil-tiwari-dev" target="_blank">
               <div className={socialLinkStyles}>
                 <FaLinkedin />
                 <span>For the recruiters</span>
@@ -75,10 +72,7 @@ export default function Home() {
             </Link>
           </li>
           <li>
-            <Link
-              href="https://instagram.com/sahiltiwari.official"
-              target="_blank"
-            >
+            <Link href="https://instagram.com/sahiltiwari.official" target="_blank">
               <div className={socialLinkStyles}>
                 <FaInstagram />
                 <span>I also touch grass</span>

@@ -12,7 +12,7 @@ export const metadata = {
 export default function About() {
   return (
     <div className="min-h-screen flex flex-col">
-      <main className="w-1/2 flex flex-col mx-auto gap-12 pt-12 flex-1">
+      <main className="w-11/12 md:w-1/2 flex flex-col mx-auto gap-12 pt-12 flex-1">
         <Header headername="About Me" />
         <div className="flex flex-col gap-6">
           <p>
@@ -20,14 +20,37 @@ export default function About() {
             heard of. It's a small town, the internet is decent, and the tea is
             excellent. The people are a little weird but manageable.
           </p>
-          <div className="flex flex-row justify-center items-center py-5">
+          <div className="flex flex-col md:flex-row justify-center items-center py-5 gap-4">
             <Link
               href="https://instagram.com/sahiltiwari.official"
               target="_blank"
             >
-              <Image src="/me.jpg" alt="Sahil" width={400} height={400} />
+              <Image
+                src="/me.jpg"
+                alt="Sahil"
+                width={400}
+                height={400}
+                priority
+                className="w-64 md:w-96"
+              />
             </Link>
-            <Image src="/arrow.png" alt="arrow" width={200} height={50} />
+
+            <Image
+              src="/arrow.png"
+              alt="arrow"
+              width={200}
+              height={50}
+              className="hidden md:block w-48"
+            />
+
+            <Image
+              src="/arrow-mobile.png"
+              alt="arrow"
+              width={100}
+              height={100}
+              style={{ width: "auto", height: "auto" }}
+              className="block md:hidden"
+            />
           </div>
           <p>
             I did my BCA from Brainware University (2022–2025). College tried to

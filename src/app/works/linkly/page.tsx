@@ -8,9 +8,9 @@ export const metadata = {
 export default function Linkly() {
   return (
     <div className="min-h-screen flex flex-col">
-      <main className="w-1/2 flex flex-col mx-auto gap-8 pt-12 flex-1">
+      <main className="w-11/12 md:w-1/2 flex flex-col mx-auto gap-8 pt-12 flex-1">
         <Header headername="Linkly" backHref="/works" />
-        <p className="text-6xl font-extrabold text-white/20">Coming Soon.</p>
+        <p className="text-4xl md:text-6xl font-extrabold text-white/20">Coming Soon.</p>
       </main>
     </div>
   );

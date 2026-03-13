@@ -10,11 +10,11 @@ export const metadata = {
 export default function Contact() {
   return (
     <div className="min-h-screen flex flex-col">
-      <main className="w-1/2 flex flex-col mx-auto gap-8 pt-12 flex-1">
+      <main className="w-11/12 md:w-1/2 flex flex-col mx-auto gap-8 pt-12 flex-1">
         <Header headername="Get in Touch" />
         <ContactClient />
       </main>
       <Footer />
     </div>
-  )
+  );
 }

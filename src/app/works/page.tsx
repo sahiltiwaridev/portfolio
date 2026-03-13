@@ -21,7 +21,7 @@ const arrowStyles = "transition-transform duration-200 group-hover:-rotate-45";
 export default function Works() {
   return (
     <div className="min-h-screen flex flex-col">
-      <main className="w-1/2 flex flex-col mx-auto gap-8 pt-12 flex-1">
+      <main className="w-11/12 md:w-1/2 flex flex-col mx-auto gap-8 pt-12 flex-1">
         <Header headername="Works" />
         <div className="flex flex-col">
           {projects.map(({ name, description, href }) => (

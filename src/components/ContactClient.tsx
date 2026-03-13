@@ -97,7 +97,7 @@ export default function ContactClient() {
 
         <div className="flex flex-col items-center gap-4 pt-4">
           <span className="text-gray-400 text-sm">or find me here</span>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap justify-center gap-6">
             {socialLinks.map(({ href, icon: Icon, label }) => (
               <Link
                 key={href}
