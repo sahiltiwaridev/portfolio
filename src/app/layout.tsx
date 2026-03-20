@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Sahil Tiwari — JavaScript Developer",
   description:
-    "Hey, I'm Sahil. I speak JavaScript, build things that barely work, and document the process that nobody reads.",
+    "Hey, I'm Sahil. I speak JavaScript, build things that barely work, and document the results that nobody reads.",
   keywords: [
     "Sahil Tiwari",
     "JavaScript Developer",
