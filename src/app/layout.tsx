@@ -15,26 +15,30 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Sahil Tiwari — JavaScript Developer",
   description:
-    "Hey, I'm Sahil. I speak JavaScript, build things that barely work, and document the results that nobody reads.",
+    "Sahil Tiwari is a JavaScript developer from West Bengal, India. Building web apps with React and Next.js.",
   keywords: [
     "Sahil Tiwari",
     "JavaScript Developer",
-    "React",
-    "Next.js",
+    "React Developer",
+    "Next.js Developer",
+    "Frontend Developer",
+    "Web Developer India",
     "Portfolio",
   ],
   authors: [{ name: "Sahil Tiwari" }],
   openGraph: {
     title: "Sahil Tiwari — JavaScript Developer",
-    description: "JavaScript developer from Habra, West Bengal.",
-    url: "https://yourdomain.com",
+    description:
+      "JavaScript developer from West Bengal, India. Building web apps with React and Next.js.",
+    url: "https://portfolio-six-chi-kmc4bfrxcz.vercel.app",
     siteName: "Sahil Tiwari",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Sahil Tiwari — JavaScript Developer",
-    description: "JavaScript developer from Habra, West Bengal.",
+    description:
+      "JavaScript developer from West Bengal, India. Building web apps with React and Next.js.",
   },
   verification: {
     google: "FBEGmsRGzOIk4TaYAc2XaeI0CmMU4vJ2fRpmfE2Vt1I",

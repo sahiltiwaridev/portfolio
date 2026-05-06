@@ -5,7 +5,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Works — Sahil Tiwari",
-  description: "Projects and apps built by Sahil Tiwari.",
+  description:
+    "Projects built by Sahil Tiwari — including Linkly, a QR-based profile sharing app.",
 };
 
 const projects = [

@@ -6,7 +6,7 @@ import Link from "next/link";
 export const metadata = {
   title: "About — Sahil Tiwari",
   description:
-    "BCA graduate from Habra, West Bengal. Self-taught JavaScript developer.",
+    "Self-taught JavaScript developer from Habra, West Bengal. BCA graduate, building with React and Next.js.",
 };
 
 export default function About() {
@@ -104,9 +104,11 @@ export default function About() {
             ago. The list is growing. The salary isn't.
           </p>
           <p>
-            Career plan? Job first, then my own thing, then maybe teach. Or all
-            three at once — I'll figure it out, probably at 2am between two bugs
-            and a deadline I definitely knew about way earlier.
+            Career plan? Currently working as a Management Trainee at my
+            university — decent gig, learning things, not done yet. A tech job
+            is the goal, always was. The rest — my own thing, maybe teaching —
+            comes after. Or all at once, at 2am, between two bugs and a deadline
+            I definitely knew about way earlier.
           </p>
           <p>
             If you read all of this, you're either a recruiter, a stalker, or

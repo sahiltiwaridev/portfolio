@@ -6,7 +6,7 @@ import { MdWavingHand } from "react-icons/md";
 export const metadata = {
   title: "Sahil Tiwari — JavaScript Developer",
   description:
-    "Hey, I'm Sahil. I speak JavaScript, build things that barely work, and document the results that nobody reads.",
+    "Sahil Tiwari is a JavaScript developer from West Bengal, India. Building web apps with React and Next.js.",
 };
 
 const pageLinkStyles = "flex items-center gap-2 text-lg md:text-xl";

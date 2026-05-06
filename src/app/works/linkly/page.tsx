@@ -2,7 +2,8 @@ import Header from "@/components/Header";
 
 export const metadata = {
   title: "Linkly — Sahil Tiwari",
-  description: "QR-based profile sharing app by Sahil Tiwari.",
+  description: "QR-based profile sharing app by Sahil Tiwari. Coming soon.",
+  robots: { index: false },
 };
 
 export default function Linkly() {
