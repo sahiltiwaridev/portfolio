@@ -7,6 +7,12 @@ export const metadata = {
   title: "About — Sahil Tiwari",
   description:
     "Self-taught JavaScript developer from Habra, West Bengal. BCA graduate, building with React and Next.js.",
+  openGraph: {
+    title: "About — Sahil Tiwari",
+    description:
+      "Self-taught JavaScript developer from Habra, West Bengal. BCA graduate, building with React and Next.js.",
+    url: "https://portfolio-six-chi-kmc4bfrxcz.vercel.app/about",
+  },
 };
 
 export default function About() {
