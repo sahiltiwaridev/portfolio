@@ -13,6 +13,11 @@ export const metadata = {
       "Self-taught JavaScript developer from Habra, West Bengal. BCA graduate, building with React and Next.js.",
     url: "https://portfolio-six-chi-kmc4bfrxcz.vercel.app/about",
   },
+  twitter: {
+    title: "About — Sahil Tiwari",
+    description:
+      "Self-taught JavaScript developer from Habra, West Bengal. BCA graduate, building with React and Next.js.",
+  },
 };
 
 export default function About() {
