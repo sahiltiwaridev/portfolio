@@ -34,7 +34,14 @@ export const metadata = {
     url: "https://portfolio-six-chi-kmc4bfrxcz.vercel.app",
     siteName: "Sahil Tiwari",
     type: "website",
-    images: [{ url: "/og.png", width: 1024, height: 629, alt: "Sahil Tiwari — JavaScript Developer" }],
+    images: [
+      {
+        url: "/og.png",
+        width: 1024,
+        height: 629,
+        alt: "Sahil Tiwari — JavaScript Developer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -58,6 +65,23 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Sahil Tiwari",
+              url: "https://portfolio-six-chi-kmc4bfrxcz.vercel.app",
+              jobTitle: "JavaScript Developer",
+              sameAs: [
+                "https://github.com/sahiltiwaridev",
+                "https://linkedin.com/in/sahil-tiwari-dev",
+                "https://instagram.com/sahiltiwari.official",
+              ],
+            }),
+          }}
+        />
         {children}
       </body>
     </html>
