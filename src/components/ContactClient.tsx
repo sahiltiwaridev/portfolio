@@ -7,9 +7,21 @@ import { FaXTwitter, FaPinterest } from "react-icons/fa6";
 import Link from "next/link";
 
 const socialLinks = [
-  { href: "https://github.com/sahiltiwaridev", icon: FaGithub, label: "GitHub" },
-  { href: "https://linkedin.com/in/sahil-tiwari-dev", icon: FaLinkedin, label: "LinkedIn" },
-  { href: "https://instagram.com/sahiltiwari.official", icon: FaInstagram, label: "Instagram" },
+  {
+    href: "https://github.com/sahiltiwaridev",
+    icon: FaGithub,
+    label: "GitHub",
+  },
+  {
+    href: "https://linkedin.com/in/sahil-tiwari-dev",
+    icon: FaLinkedin,
+    label: "LinkedIn",
+  },
+  {
+    href: "https://instagram.com/sahiltiwari.official",
+    icon: FaInstagram,
+    label: "Instagram",
+  },
   { href: "https://x.com/Sahil_Creates", icon: FaXTwitter, label: "X" },
   { href: "https://pin.it/3qZTuPaDz", icon: FaPinterest, label: "Pinterest" },
 ];
@@ -23,7 +35,7 @@ export default function ContactClient() {
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState("");
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("sending");
 
@@ -31,7 +43,7 @@ export default function ContactClient() {
       await emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-        { name, email, message },
+        { name: name.trim(), email: email.trim(), message: message.trim() },
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
       );
       setStatus("success");

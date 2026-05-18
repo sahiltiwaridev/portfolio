@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
 export const metadata = {
@@ -13,6 +14,7 @@ export default function Linkly() {
         <Header headername="Linkly" backHref="/works" />
         <p className="text-4xl md:text-6xl font-extrabold text-white/20">Coming Soon.</p>
       </main>
+      <Footer />
     </div>
   );
 }
