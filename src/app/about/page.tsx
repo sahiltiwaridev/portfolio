@@ -45,7 +45,6 @@ export default function About() {
                 className="w-64 md:w-96"
               />
             </Link>
-
             <Image
               src="/arrow.png"
               alt="arrow"
@@ -53,7 +52,6 @@ export default function About() {
               height={50}
               className="hidden md:block w-48"
             />
-
             <Image
               src="/arrow-mobile.png"
               alt="arrow"
@@ -77,14 +75,20 @@ export default function About() {
             nobody solved it properly — usually both, with the same deadline.
             It's all JavaScript for now, which is either a superpower or a
             coping mechanism, depending on the day. I also have ideas I'd like
-            to give a life to someday — just waiting for the right time, the
-            right skills, or honestly just a job first. Can't say what's in
-            progress right now — partly mysterious, mostly because it's still
-            half-broken. When it's ready, it'll show up on the{" "}
+            to give a life to someday — the time and skills are getting there.
+            Slowly. Very slowly. Can't say what's in progress right now — partly
+            mysterious, mostly because it's still half-broken. When it's ready,
+            it'll show up on the{" "}
             <Link href="/works" className="underline underline-offset-4">
               Works page
             </Link>
             .
+          </p>
+          <p>
+            Tech stack? React.js, Next.js, React Native for what you see —
+            Node.js, Express for what you don't, PostgreSQL and MongoDB
+            to manage the data. Worthy enough to handle most things. That's why
+            I picked them.
           </p>
           <p>
             When I'm not drowning in TypeScript errors, I shoot landscapes — not
@@ -110,16 +114,17 @@ export default function About() {
             chance.
           </p>
           <p>
-            Then there are the things I'll do once I get a job — buy a bike, hit
-            the roads, pick up drawing again like I used to, ten thousand years
-            ago. The list is growing. The salary isn't.
-          </p>
-          <p>
             Career plan? Currently working as a Management Trainee at my
             university — decent gig, learning things, not done yet. A tech job
             is the goal, always was. The rest — my own thing, maybe teaching —
             comes after. Or all at once, at 2am, between two bugs and a deadline
             I definitely knew about way earlier.
+          </p>
+          <p>
+            Then there are the things that live in the 'one day' folder — a
+            bike, long roads, and drawing, which I was actually good at before I
+            ghosted it ten thousand years ago. The folder's getting heavy. The
+            salary's not helping.
           </p>
           <p>
             If you read all of this, you're either a recruiter, a stalker, or
