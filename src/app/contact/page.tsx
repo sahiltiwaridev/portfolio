@@ -4,7 +4,23 @@ import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Get in Touch — Sahil Tiwari",
-  description: "Reach out to Sahil Tiwari for work, collaboration, or just to talk.",
+  description:
+    "Reach out to Sahil Tiwari for work, collaboration, or just to talk.",
+  alternates: {
+    canonical: "https://portfolio-six-chi-kmc4bfrxcz.vercel.app/contact",
+  },
+  openGraph: {
+    title: "Get in Touch — Sahil Tiwari",
+    description:
+      "Reach out to Sahil Tiwari for work, collaboration, or just to talk.",
+    url: "https://portfolio-six-chi-kmc4bfrxcz.vercel.app/contact",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Get in Touch — Sahil Tiwari",
+    description:
+      "Reach out to Sahil Tiwari for work, collaboration, or just to talk.",
+  },
 };
 
 export default function Contact() {

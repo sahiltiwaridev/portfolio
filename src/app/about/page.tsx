@@ -7,6 +7,9 @@ export const metadata = {
   title: "About — Sahil Tiwari",
   description:
     "Self-taught JavaScript developer from Habra, West Bengal. BCA graduate, building with React and Next.js.",
+  alternates: {
+    canonical: "https://portfolio-six-chi-kmc4bfrxcz.vercel.app/about",
+  },
   openGraph: {
     title: "About — Sahil Tiwari",
     description:
@@ -14,6 +17,7 @@ export const metadata = {
     url: "https://portfolio-six-chi-kmc4bfrxcz.vercel.app/about",
   },
   twitter: {
+    card: "summary_large_image",
     title: "About — Sahil Tiwari",
     description:
       "Self-taught JavaScript developer from Habra, West Bengal. BCA graduate, building with React and Next.js.",
@@ -25,7 +29,7 @@ export default function About() {
     <div className="min-h-screen flex flex-col">
       <main className="w-11/12 md:w-1/2 flex flex-col mx-auto gap-12 pt-12 flex-1">
         <Header headername="About Me" />
-        <div className="flex flex-col gap-6">
+        <article className="flex flex-col gap-6">
           <p>
             I'm Sahil, from Habra, West Bengal — a place you've probably never
             heard of. It's a small town, the internet is decent, and the tea is
@@ -35,10 +39,12 @@ export default function About() {
             <Link
               href="https://instagram.com/sahiltiwari.official"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View Sahil Tiwari's Instagram profile"
             >
               <Image
                 src="/me.jpg"
-                alt="Sahil"
+                alt="Sahil Tiwari, JavaScript developer from Habra, West Bengal"
                 width={400}
                 height={400}
                 priority
@@ -47,14 +53,16 @@ export default function About() {
             </Link>
             <Image
               src="/arrow.png"
-              alt="arrow"
+              alt=""
+              aria-hidden="true"
               width={200}
               height={50}
               className="hidden md:block w-48"
             />
             <Image
               src="/arrow-mobile.png"
-              alt="arrow"
+              alt=""
+              aria-hidden="true"
               width={100}
               height={100}
               style={{ width: "auto", height: "auto" }}
@@ -86,9 +94,8 @@ export default function About() {
           </p>
           <p>
             Tech stack? React.js, Next.js, React Native for what you see —
-            Node.js, Express for what you don't, PostgreSQL and MongoDB
-            to manage the data. Worthy enough to handle most things. That's why
-            I picked them.
+            Node.js, Express, PostgreSQL and MongoDB to manage the data. Worthy
+            enough to handle most things. That's why I picked them.
           </p>
           <p>
             When I'm not drowning in TypeScript errors, I shoot landscapes — not
@@ -97,6 +104,7 @@ export default function About() {
               href="https://instagram.com/sahiltiwari.official"
               className="underline underline-offset-4"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Instagram
             </Link>{" "}
@@ -105,6 +113,7 @@ export default function About() {
               href="https://pin.it/3qZTuPaDz"
               className="underline underline-offset-4"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Pinterest
             </Link>{" "}
@@ -134,7 +143,7 @@ export default function About() {
             </Link>
             . I'm very much available.
           </p>
-        </div>
+        </article>
       </main>
       <Footer />
     </div>

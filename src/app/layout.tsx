@@ -12,8 +12,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   metadataBase: new URL("https://portfolio-six-chi-kmc4bfrxcz.vercel.app"),
+  themeColor: "#000000",
   title: "Sahil Tiwari — JavaScript Developer",
   description:
     "Sahil Tiwari is a JavaScript developer from West Bengal, India. Building web apps with React and Next.js.",
@@ -27,6 +28,9 @@ export const metadata = {
     "Portfolio",
   ],
   authors: [{ name: "Sahil Tiwari" }],
+  alternates: {
+    canonical: "https://portfolio-six-chi-kmc4bfrxcz.vercel.app",
+  },
   openGraph: {
     title: "Sahil Tiwari — JavaScript Developer",
     description:
@@ -68,18 +72,32 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              name: "Sahil Tiwari",
-              url: "https://portfolio-six-chi-kmc4bfrxcz.vercel.app",
-              jobTitle: "JavaScript Developer",
-              sameAs: [
-                "https://github.com/sahiltiwaridev",
-                "https://linkedin.com/in/sahil-tiwari-dev",
-                "https://instagram.com/sahiltiwari.official",
-              ],
-            }),
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                name: "Sahil Tiwari",
+                url: "https://portfolio-six-chi-kmc4bfrxcz.vercel.app",
+                jobTitle: "JavaScript Developer",
+                sameAs: [
+                  "https://github.com/sahiltiwaridev",
+                  "https://linkedin.com/in/sahil-tiwari-dev",
+                  "https://instagram.com/sahiltiwari.official",
+                ],
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                name: "Sahil Tiwari",
+                url: "https://portfolio-six-chi-kmc4bfrxcz.vercel.app",
+                description:
+                  "Portfolio of Sahil Tiwari, a JavaScript developer from West Bengal, India.",
+                author: {
+                  "@type": "Person",
+                  name: "Sahil Tiwari",
+                },
+              },
+            ]),
           }}
         />
         {children}
