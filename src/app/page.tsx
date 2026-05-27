@@ -69,7 +69,6 @@ export default function Home() {
                 href="https://github.com/sahiltiwaridev"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="GitHub profile of Sahil Tiwari"
               >
                 <div className={socialLinkStyles}>
                   <FaGithub aria-hidden="true" />
@@ -82,7 +81,6 @@ export default function Home() {
                 href="https://linkedin.com/in/sahil-tiwari-dev"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="LinkedIn profile of Sahil Tiwari"
               >
                 <div className={socialLinkStyles}>
                   <FaLinkedin aria-hidden="true" />
@@ -95,7 +93,6 @@ export default function Home() {
                 href="https://instagram.com/sahiltiwari.official"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Instagram profile of Sahil Tiwari"
               >
                 <div className={socialLinkStyles}>
                   <FaInstagram aria-hidden="true" />
