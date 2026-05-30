@@ -31,7 +31,6 @@ export default function About() {
       <main className="w-11/12 md:w-1/2 flex flex-col mx-auto gap-8 pt-12 flex-1">
         <Header headername="About Me" />
         <article className="flex flex-col gap-6">
-
           <p>
             I'm Sahil, from Habra, West Bengal — a place you've probably never
             heard of. It's a small town, the internet is decent, and the tea is
@@ -87,27 +86,27 @@ export default function About() {
           <SectionDivider title="where it went" />
           <p>
             Sometimes I build to learn, sometimes because a problem exists and
-            nobody solved it properly — usually both, with the same deadline.
-            It's all JavaScript for now, which is either a superpower or a
-            coping mechanism, depending on the day. I also have ideas I'd like
-            to give a life to someday — the time and skills are getting there.
-            Slowly. Very slowly. Can't say what's in progress right now — partly
-            mysterious, mostly because it's still half-broken. When it's ready,
-            it'll show up on the{" "}
+            nobody solved it properly — usually both, with the same deadline. I
+            also have ideas I'd like to give a life to someday — the time and
+            skills are getting there. Slowly. Very slowly. Can't say what's in
+            progress right now — partly mysterious, mostly because it's still
+            half-broken. When it's ready, it'll show up on the{" "}
             <Link href="/works" className="underline underline-offset-4">
               Works page
             </Link>
             .
           </p>
 
-          <SectionDivider title="the stack" />
+          <SectionDivider title="my toolkit" />
           <p>
-            Tech stack? React.js, Next.js, React Native for what you see —
-            Node.js, Express, PostgreSQL and MongoDB to manage the data. Worthy
-            enough to handle most things. That's why I picked them.
+            It's all JavaScript for now, which is either a superpower or a
+            coping mechanism, depending on the day. React.js, Next.js, React
+            Native for what you see — Node.js, Express, PostgreSQL and MongoDB
+            to manage the data. Worthy enough to handle most things. That's why
+            I picked them.
           </p>
 
-          <SectionDivider title="when I'm not coding" />
+          <SectionDivider title="behind the screen" />
           <p>
             When I'm not drowning in TypeScript errors, I shoot landscapes — not
             professional, just personal (check my{" "}
@@ -159,7 +158,6 @@ export default function About() {
             </Link>
             . I'm very much available.
           </p>
-
         </article>
       </main>
       <Footer />

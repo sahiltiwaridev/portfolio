@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { SiHashnode } from "react-icons/si";
 import { MdWavingHand } from "react-icons/md";
 
 export const metadata = {
@@ -19,7 +20,7 @@ const arrowStyles = "transition-transform duration-200 group-hover:-rotate-45";
 
 export default function Home() {
   return (
-    <main className="flex flex-col h-full w-full px-6 md:px-20 py-20 md:py-44 gap-10">
+    <main className="flex flex-col h-full w-full px-6 md:px-20 py-20 md:py-44 gap-8">
       <p className="sr-only">
         Sahil Tiwari is a JavaScript developer from West Bengal, India, building
         web applications, mobile apps, and developer-focused projects using
@@ -62,6 +63,19 @@ export default function Home() {
                 </div>
               </Link>
             </li>
+            <li>
+              <a
+                href="/Sahil_Tiwari_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group"
+              >
+                <div className={pageLinkStyles}>
+                  <ArrowRight className={arrowStyles} aria-hidden="true" />
+                  <span>Resume</span>
+                </div>
+              </a>
+            </li>
           </ul>
           <ul aria-label="Social links">
             <li>
@@ -97,6 +111,18 @@ export default function Home() {
                 <div className={socialLinkStyles}>
                   <FaInstagram aria-hidden="true" />
                   <span>I also touch grass</span>
+                </div>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="https://hashnode.com/@sahiltiwari"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className={socialLinkStyles}>
+                  <SiHashnode aria-hidden="true" />
+                  <span>Actually readable docs</span>
                 </div>
               </Link>
             </li>
