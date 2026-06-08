@@ -31,9 +31,8 @@ export default function Home() {
           Hey!
           <MdWavingHand className="text-yellow-400" aria-hidden="true" />
         </span>{" "}
-        I'm <Link href="/about">Sahil.</Link> I speak JavaScript, build{" "}
-        <Link href="/works">things</Link> that somehow work, and document the
-        results that nobody reads.
+        I'm Sahil. I speak JavaScript, build things that somehow work, and
+        document the results that nobody reads.
       </h1>
 
       <nav aria-label="Site navigation">
