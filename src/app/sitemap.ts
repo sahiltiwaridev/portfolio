@@ -2,7 +2,7 @@ export default function sitemap() {
   return [
     {
       url: "https://portfolio-six-chi-kmc4bfrxcz.vercel.app",
-      lastModified: new Date("2026-05-18"),
+      lastModified: new Date("2026-06-30"),
     },
     {
       url: "https://portfolio-six-chi-kmc4bfrxcz.vercel.app/about",
@@ -10,7 +10,11 @@ export default function sitemap() {
     },
     {
       url: "https://portfolio-six-chi-kmc4bfrxcz.vercel.app/works",
-      lastModified: new Date("2026-05-18"),
+      lastModified: new Date("2026-06-30"),
+    },
+    {
+      url: "https://portfolio-six-chi-kmc4bfrxcz.vercel.app/works/linkly",
+      lastModified: new Date("2026-06-30"),
     },
     {
       url: "https://portfolio-six-chi-kmc4bfrxcz.vercel.app/contact",

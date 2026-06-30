@@ -4,22 +4,24 @@ import SectionDivider from "@/components/Sectiondivider";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
+const PAGE_DESCRIPTION =
+  "An offline-first Android app for sharing your profile instantly via QR code — no internet, no typing, no accounts.";
+
 export const metadata = {
   title: "Linkly — Sahil Tiwari",
-  description: "QR-based profile sharing app by Sahil Tiwari. Coming soon.",
-  robots: { index: false },
+  description: PAGE_DESCRIPTION,
   alternates: {
     canonical: "https://portfolio-six-chi-kmc4bfrxcz.vercel.app/works/linkly",
   },
   openGraph: {
     title: "Linkly — Sahil Tiwari",
-    description: "QR-based profile sharing app by Sahil Tiwari. Coming soon.",
+    description: PAGE_DESCRIPTION,
     url: "https://portfolio-six-chi-kmc4bfrxcz.vercel.app/works/linkly",
   },
   twitter: {
     card: "summary_large_image",
     title: "Linkly — Sahil Tiwari",
-    description: "QR-based profile sharing app by Sahil Tiwari. Coming soon.",
+    description: PAGE_DESCRIPTION,
   },
 };
 
