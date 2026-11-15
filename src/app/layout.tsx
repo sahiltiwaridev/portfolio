@@ -1,7 +1,14 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import {
+  OG_IMAGE,
+  PAGES,
+  SITE_NAME,
+  SITE_URL,
+  TWITTER_HANDLE,
+} from "@/lib/seo";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,47 +20,57 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  themeColor: "#0a0a0a",
+  colorScheme: "dark",
+};
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://portfolio-six-chi-kmc4bfrxcz.vercel.app"),
-  themeColor: "#000000",
-  title: "Sahil Tiwari — JavaScript Developer",
-  description:
-    "Sahil Tiwari is a JavaScript developer from West Bengal, India. Building web apps with React and Next.js.",
+  metadataBase: new URL(SITE_URL),
+  title: PAGES.home.title,
+  description: PAGES.home.description,
+  applicationName: SITE_NAME,
   keywords: [
     "Sahil Tiwari",
+    "Frontend Developer",
+    "Full-Stack Developer",
     "JavaScript Developer",
     "React Developer",
     "Next.js Developer",
-    "Frontend Developer",
-    "Web Developer India",
+    "React Native Developer",
+    "TypeScript",
+    "Web Developer Kolkata",
+    "Web Developer West Bengal",
     "Portfolio",
   ],
-  authors: [{ name: "Sahil Tiwari" }],
-  alternates: {
-    canonical: "https://portfolio-six-chi-kmc4bfrxcz.vercel.app",
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  category: "technology",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
   openGraph: {
-    title: "Sahil Tiwari — JavaScript Developer",
-    description:
-      "JavaScript developer from West Bengal, India. Building web apps with React and Next.js.",
-    url: "https://portfolio-six-chi-kmc4bfrxcz.vercel.app",
-    siteName: "Sahil Tiwari",
+    title: PAGES.home.title,
+    description: PAGES.home.description,
+    siteName: SITE_NAME,
+    locale: "en_IN",
     type: "website",
-    images: [
-      {
-        url: "/og.png",
-        width: 1024,
-        height: 629,
-        alt: "Sahil Tiwari — JavaScript Developer",
-      },
-    ],
+    images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sahil Tiwari — JavaScript Developer",
-    description:
-      "JavaScript developer from West Bengal, India. Building web apps with React and Next.js.",
-    images: ["/og.png"],
+    title: PAGES.home.title,
+    description: PAGES.home.description,
+    creator: TWITTER_HANDLE,
+    images: [OG_IMAGE.url],
   },
   verification: {
     google: "FBEGmsRGzOIk4TaYAc2XaeI0CmMU4vJ2fRpmfE2Vt1I",
@@ -82,37 +99,6 @@ export default function RootLayout({
             gtag('config', 'G-E3TEHVR8VT');
           `}
         </Script>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify([
-              {
-                "@context": "https://schema.org",
-                "@type": "Person",
-                name: "Sahil Tiwari",
-                url: "https://portfolio-six-chi-kmc4bfrxcz.vercel.app",
-                jobTitle: "JavaScript Developer",
-                sameAs: [
-                  "https://github.com/sahiltiwaridev",
-                  "https://linkedin.com/in/sahil-tiwari-dev",
-                  "https://instagram.com/sahiltiwari.official",
-                ],
-              },
-              {
-                "@context": "https://schema.org",
-                "@type": "WebSite",
-                name: "Sahil Tiwari",
-                url: "https://portfolio-six-chi-kmc4bfrxcz.vercel.app",
-                description:
-                  "Portfolio of Sahil Tiwari, a JavaScript developer from West Bengal, India.",
-                author: {
-                  "@type": "Person",
-                  name: "Sahil Tiwari",
-                },
-              },
-            ]),
-          }}
-        />
         {children}
       </body>
     </html>

@@ -3,15 +3,18 @@ import Link from "next/link";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { SiHashnode } from "react-icons/si";
 import { MdWavingHand } from "react-icons/md";
+import JsonLd from "@/components/JsonLd";
+import {
+  PAGES,
+  PERSON_ID,
+  SITE_NAME,
+  WEBSITE_ID,
+  absoluteUrl,
+  buildMetadata,
+  personNode,
+} from "@/lib/seo";
 
-export const metadata = {
-  title: "Sahil Tiwari — JavaScript Developer",
-  description:
-    "Sahil Tiwari is a JavaScript developer from West Bengal, India. Building web apps with React and Next.js.",
-  alternates: {
-    canonical: "https://portfolio-six-chi-kmc4bfrxcz.vercel.app",
-  },
-};
+export const metadata = buildMetadata({ ...PAGES.home });
 
 const pageLinkStyles = "flex items-center gap-2 text-lg md:text-xl";
 const socialLinkStyles =
@@ -21,18 +24,34 @@ const arrowStyles = "transition-transform duration-200 group-hover:-rotate-45";
 export default function Home() {
   return (
     <main className="flex flex-col h-full w-full px-6 md:px-20 py-20 md:py-44 gap-8">
+      <JsonLd
+        graph={[
+          personNode(),
+          {
+            "@type": "WebSite",
+            "@id": WEBSITE_ID,
+            url: absoluteUrl("/"),
+            name: SITE_NAME,
+            description: PAGES.home.description,
+            inLanguage: "en",
+            author: { "@id": PERSON_ID },
+            publisher: { "@id": PERSON_ID },
+          },
+        ]}
+      />
       <p className="sr-only">
-        Sahil Tiwari is a JavaScript developer from West Bengal, India, building
-        web applications, mobile apps, and developer-focused projects using
-        React, Next.js, React Native, Node.js, PostgreSQL, and MongoDB.
+        Sahil Tiwari is a frontend and full-stack developer from West Bengal,
+        India, building web applications, mobile apps and desktop apps with
+        React, Next.js, React Native, Electron, TypeScript, NestJS, PostgreSQL
+        and MongoDB.
       </p>
       <h1 className="text-4xl md:text-6xl font-extrabold">
         <span className="flex items-center gap-2">
           Hey!
           <MdWavingHand className="text-yellow-400" aria-hidden="true" />
         </span>{" "}
-        I'm Sahil. I speak JavaScript, build things that somehow work, and
-        document the results that nobody reads.
+        I`&apos;`m Sahil. I speak JavaScript, build things that somehow work,
+        and document the results that nobody reads.
       </h1>
 
       <nav aria-label="Site navigation">

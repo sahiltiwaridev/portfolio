@@ -2,27 +2,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import JsonLd from "@/components/JsonLd";
+import { PAGES, absoluteUrl, breadcrumbNode, buildMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Works — Sahil Tiwari",
-  description:
-    "Projects built by Sahil Tiwari — including Linkly, a QR-based profile sharing app.",
-  alternates: {
-    canonical: "https://portfolio-six-chi-kmc4bfrxcz.vercel.app/works",
-  },
-  openGraph: {
-    title: "Works — Sahil Tiwari",
-    description:
-      "Projects built by Sahil Tiwari — including Linkly, a QR-based profile sharing app.",
-    url: "https://portfolio-six-chi-kmc4bfrxcz.vercel.app/works",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Works — Sahil Tiwari",
-    description:
-      "Projects built by Sahil Tiwari — including Linkly, a QR-based profile sharing app.",
-  },
-};
+export const metadata = buildMetadata({ ...PAGES.works });
 
 const projects = [
   {
@@ -38,6 +21,28 @@ export default function Works() {
   return (
     <div className="min-h-screen flex flex-col">
       <main className="w-11/12 md:w-1/2 flex flex-col mx-auto gap-8 pt-12 flex-1">
+        <JsonLd
+          graph={[
+            {
+              "@type": "CollectionPage",
+              url: absoluteUrl(PAGES.works.path),
+              name: PAGES.works.title,
+              mainEntity: {
+                "@type": "ItemList",
+                itemListElement: projects.map(({ name, href }, index) => ({
+                  "@type": "ListItem",
+                  position: index + 1,
+                  name,
+                  url: absoluteUrl(href),
+                })),
+              },
+            },
+            breadcrumbNode([
+              { name: "Home", path: PAGES.home.path },
+              { name: "Works", path: PAGES.works.path },
+            ]),
+          ]}
+        />
         <Header headername="Works" />
         <section aria-label="Projects list">
           {projects.map(({ name, description, href }) => (
@@ -48,7 +53,11 @@ export default function Works() {
               aria-label={`${name} — ${description}`}
             >
               <div className="flex items-center gap-2">
-                <ArrowRight size={20} className={arrowStyles} aria-hidden="true" />
+                <ArrowRight
+                  size={20}
+                  className={arrowStyles}
+                  aria-hidden="true"
+                />
                 <span className="text-xl font-bold">{name}</span>
               </div>
               <p className="text-gray-400 text-sm pl-7">{description}</p>

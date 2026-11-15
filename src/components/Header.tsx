@@ -9,7 +9,7 @@ export type headerProps = {
 export default function Header({ headername, backHref = "/" }: headerProps) {
   return (
     <header className="flex flex-row gap-4 md:gap-6 items-center">
-      <Link href={backHref}>
+      <Link href={backHref} aria-label="Go back">
         <ChevronLeft size={32} className="md:hidden" />
         <ChevronLeft size={44} className="hidden md:block" />
       </Link>

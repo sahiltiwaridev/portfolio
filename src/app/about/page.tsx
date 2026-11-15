@@ -3,36 +3,43 @@ import Header from "@/components/Header";
 import SectionDivider from "@/components/Sectiondivider";
 import Image from "next/image";
 import Link from "next/link";
+import JsonLd from "@/components/JsonLd";
+import {
+  PAGES,
+  absoluteUrl,
+  breadcrumbNode,
+  buildMetadata,
+  personNode,
+} from "@/lib/seo";
 
-export const metadata = {
-  title: "About — Sahil Tiwari",
-  description:
-    "Self-taught JavaScript developer from Habra, West Bengal. BCA graduate, building with React and Next.js.",
-  alternates: {
-    canonical: "https://portfolio-six-chi-kmc4bfrxcz.vercel.app/about",
-  },
-  openGraph: {
-    title: "About — Sahil Tiwari",
-    description:
-      "Self-taught JavaScript developer from Habra, West Bengal. BCA graduate, building with React and Next.js.",
-    url: "https://portfolio-six-chi-kmc4bfrxcz.vercel.app/about",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "About — Sahil Tiwari",
-    description:
-      "Self-taught JavaScript developer from Habra, West Bengal. BCA graduate, building with React and Next.js.",
-  },
-};
+export const metadata = buildMetadata({ ...PAGES.about });
 
 export default function About() {
   return (
     <div className="min-h-screen flex flex-col">
       <main className="w-11/12 md:w-1/2 flex flex-col mx-auto gap-8 pt-12 flex-1">
+        <JsonLd
+          graph={[
+            {
+              "@type": "ProfilePage",
+              url: absoluteUrl(PAGES.about.path),
+              name: PAGES.about.title,
+              mainEntity: personNode(),
+            },
+            breadcrumbNode([
+              { name: "Home", path: PAGES.home.path },
+              { name: "About", path: PAGES.about.path },
+            ]),
+          ]}
+        />
         <Header headername="About Me" />
         <article className="flex flex-col gap-6">
           <p>
-            I’m Sahil, a frontend and full-stack developer from Habra, a small town a few kilometres from Kolkata. I build with React, Next.js, React Native, Node.js, TypeScript ... basically the JavaScript ecosystem, with the stack chosen per project. I’m looking for my first developer role, and yes, I’m open to relocating.
+            I’m Sahil, a frontend and full-stack developer from Habra, a small
+            town a few kilometres from Kolkata. I build with React, Next.js,
+            React Native, Node.js, TypeScript ... basically the JavaScript
+            ecosystem, with the stack chosen per project. I’m looking for my
+            first developer role, and yes, I’m open to relocating.
           </p>
 
           <div className="flex flex-col md:flex-row justify-center items-center py-5 gap-4">
@@ -72,7 +79,10 @@ export default function About() {
 
           <SectionDivider title="how it started" />
           <p>
-            I did my BCA at Brainware University (2022-2025). College gave me the certificate. YouTube, Stack Overflow and a dangerous number of late nights gave me the skills. No regrets, just a slightly expensive piece of paper.
+            I did my BCA at Brainware University (2022-2025). College gave me
+            the certificate. YouTube, Stack Overflow and a dangerous number of
+            late nights gave me the skills. No regrets, just a slightly
+            expensive piece of paper.
           </p>
 
           <SectionDivider title="where it went" />
@@ -92,11 +102,11 @@ export default function About() {
             It’s all JavaScript/TypeScript for now, which is either a superpower
             or a coping mechanism, depending on the day. My day to day tools are
             React.js, Next.js, React Native, Electron, Node.js, NestJS,
-            PostgreSQL, MongoDB. But I’m not married to them. If a project
-            needs something else, I’ll pick it up.
+            PostgreSQL, MongoDB. But I’m not married to them. If a project needs
+            something else, I’ll pick it up.
           </p>
-            
-                    <SectionDivider title="behind the screen" />
+
+          <SectionDivider title="behind the screen" />
           <p>
             When I’m not drowning in TypeScript errors, I shoot landscapes. Not
             professionally, just personally (check my{" "}
@@ -119,8 +129,7 @@ export default function About() {
             </Link>{" "}
             if you’re curious). I play football at the local ground, play games
             occasionally, listen to songs I can’t fully understand but the vibe
-            is always there, and genuinely enjoy teaching when I get the
-            chance.
+            is always there, and genuinely enjoy teaching when I get the chance.
           </p>
 
           <SectionDivider title="what’s next" />
@@ -132,7 +141,7 @@ export default function About() {
             all at once, at 2am, powered by tea and a deadline I forgot about.
           </p>
 
-                    <p className="pt-2">
+          <p className="pt-2">
             If you read all of this, you’re either a recruiter, a stalker, or
             genuinely curious — either way,{" "}
             <Link href="/contact" className="underline underline-offset-4">
